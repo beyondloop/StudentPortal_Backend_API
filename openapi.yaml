@@ -1,0 +1,932 @@
+﻿openapi: 3.0.3
+info:
+  title: StudentPortal Backend API
+  version: 1.0.0
+  description: Endpoint inventory for the StudentPortal Spring Boot service. Request and response schemas are implemented in the backend repository.
+servers:
+  - url: http://localhost:8080
+    description: Local development
+paths:
+  '/api/v1/admin/academics':
+    get:
+      operationId: get_api_v1_admin_academics
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/academics/exams':
+    post:
+      operationId: post_api_v1_admin_academics_exams
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/academics/results':
+    post:
+      operationId: post_api_v1_admin_academics_results
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/academics/results/{id}':
+    put:
+      operationId: put_api_v1_admin_academics_results_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/academics/subjects':
+    post:
+      operationId: post_api_v1_admin_academics_subjects
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/academics/years':
+    post:
+      operationId: post_api_v1_admin_academics_years
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/documents':
+    post:
+      operationId: post_api_v1_admin_documents
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/documents/{id}/file':
+    get:
+      operationId: get_api_v1_admin_documents_id_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products':
+    get:
+      operationId: get_api_v1_admin_facility_products
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_admin_facility_products
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products/{productId}':
+    delete:
+      operationId: delete_api_v1_admin_facility_products_productId
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products/{productId}/allocations':
+    post:
+      operationId: post_api_v1_admin_facility_products_productId_allocations
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products/{productId}/stock':
+    post:
+      operationId: post_api_v1_admin_facility_products_productId_stock
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products/{productId}/students':
+    get:
+      operationId: get_api_v1_admin_facility_products_productId_students
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/products/{productId}/students/{studentId}/payment':
+    put:
+      operationId: put_api_v1_admin_facility_products_productId_students_studentId_payment
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/students/{studentId}/allocations':
+    post:
+      operationId: post_api_v1_admin_facility_students_studentId_allocations
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/facility/students/{studentId}/assets':
+    get:
+      operationId: get_api_v1_admin_facility_students_studentId_assets
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/overview':
+    get:
+      operationId: get_api_v1_admin_overview
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/permissions':
+    get:
+      operationId: get_api_v1_admin_permissions
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_admin_permissions
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/permissions/users':
+    get:
+      operationId: get_api_v1_admin_permissions_users
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/profile':
+    get:
+      operationId: get_api_v1_admin_profile
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_admin_profile
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/records/{type}':
+    get:
+      operationId: get_api_v1_admin_records_type
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/separations':
+    get:
+      operationId: get_api_v1_admin_separations
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_admin_separations
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/separations/{id}/complete':
+    post:
+      operationId: post_api_v1_admin_separations_id_complete
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/separations/{id}/items/{itemId}':
+    put:
+      operationId: put_api_v1_admin_separations_id_items_itemId
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/separations/templates':
+    get:
+      operationId: get_api_v1_admin_separations_templates
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_admin_separations_templates
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/students/{id}/insights':
+    get:
+      operationId: get_api_v1_admin_students_id_insights
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/subjects':
+    get:
+      operationId: get_api_v1_admin_subjects
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admin/transport/students':
+    get:
+      operationId: get_api_v1_admin_transport_students
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admission-enquiries':
+    get:
+      operationId: get_api_v1_admission_enquiries
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_admission_enquiries
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admissions':
+    get:
+      operationId: get_api_v1_admissions
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_admissions
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admissions/import':
+    post:
+      operationId: post_api_v1_admissions_import
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/admissions/template':
+    get:
+      operationId: get_api_v1_admissions_template
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/announcements':
+    get:
+      operationId: get_api_v1_announcements
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_announcements
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/announcements/{id}':
+    delete:
+      operationId: delete_api_v1_announcements_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_announcements_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/attendance':
+    get:
+      operationId: get_api_v1_attendance
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_attendance
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/attendance/me':
+    get:
+      operationId: get_api_v1_attendance_me
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/auth/login':
+    post:
+      operationId: post_api_v1_auth_login
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/auth/register':
+    post:
+      operationId: post_api_v1_auth_register
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments':
+    get:
+      operationId: get_api_v1_class_assignments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_class_assignments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/comments':
+    get:
+      operationId: get_api_v1_class_assignments_id_comments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_class_assignments_id_comments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/file':
+    get:
+      operationId: get_api_v1_class_assignments_id_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/status':
+    post:
+      operationId: post_api_v1_class_assignments_id_status
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/students/{studentId}/feedback':
+    post:
+      operationId: post_api_v1_class_assignments_id_students_studentId_feedback
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/students/{studentId}/review':
+    post:
+      operationId: post_api_v1_class_assignments_id_students_studentId_review
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/{id}/students/{studentId}/teacher-status':
+    post:
+      operationId: post_api_v1_class_assignments_id_students_studentId_teacher_status
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/class-assignments/classes':
+    get:
+      operationId: get_api_v1_class_assignments_classes
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/classes':
+    get:
+      operationId: get_api_v1_classes
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_classes
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/dashboard/summary':
+    get:
+      operationId: get_api_v1_dashboard_summary
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/discipline':
+    get:
+      operationId: get_api_v1_discipline
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_discipline
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/discipline/{id}/decision':
+    post:
+      operationId: post_api_v1_discipline_id_decision
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/discipline/batch':
+    post:
+      operationId: post_api_v1_discipline_batch
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/discipline/requests':
+    get:
+      operationId: get_api_v1_discipline_requests
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/discipline/types':
+    get:
+      operationId: get_api_v1_discipline_types
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/exam-timetable':
+    get:
+      operationId: get_api_v1_exam_timetable
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_exam_timetable
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/exam-timetable/file':
+    get:
+      operationId: get_api_v1_exam_timetable_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/exam-timetable/template':
+    get:
+      operationId: get_api_v1_exam_timetable_template
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fee-collections':
+    get:
+      operationId: get_api_v1_fee_collections
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fee-collections/receipts':
+    post:
+      operationId: post_api_v1_fee_collections_receipts
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fee-collections/students/{studentId}/history':
+    get:
+      operationId: get_api_v1_fee_collections_students_studentId_history
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fee-collections/students/{studentId}/receipt-options':
+    get:
+      operationId: get_api_v1_fee_collections_students_studentId_receipt_options
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fees/me':
+    get:
+      operationId: get_api_v1_fees_me
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fees/me/{invoiceId}/payments':
+    post:
+      operationId: post_api_v1_fees_me_invoiceId_payments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/fees/me/structure':
+    get:
+      operationId: get_api_v1_fees_me_structure
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/holidays':
+    get:
+      operationId: get_api_v1_holidays
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_holidays
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/holidays/{id}':
+    delete:
+      operationId: delete_api_v1_holidays_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/holidays/import':
+    post:
+      operationId: post_api_v1_holidays_import
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/notifications':
+    get:
+      operationId: get_api_v1_notifications
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_notifications
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/notifications/{id}':
+    delete:
+      operationId: delete_api_v1_notifications_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_notifications_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/days':
+    get:
+      operationId: get_api_v1_payroll_days
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/employees':
+    get:
+      operationId: get_api_v1_payroll_employees
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/employees/{id}':
+    put:
+      operationId: put_api_v1_payroll_employees_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/generate':
+    post:
+      operationId: post_api_v1_payroll_generate
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/slips':
+    delete:
+      operationId: delete_api_v1_payroll_slips
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    get:
+      operationId: get_api_v1_payroll_slips
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/slips/{id}':
+    delete:
+      operationId: delete_api_v1_payroll_slips_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/structures':
+    get:
+      operationId: get_api_v1_payroll_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_payroll_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/payroll/structures/{teacherId}':
+    put:
+      operationId: put_api_v1_payroll_structures_teacherId
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/permissions/me':
+    get:
+      operationId: get_api_v1_permissions_me
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/sections':
+    get:
+      operationId: get_api_v1_sections
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_sections
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/student/exams':
+    get:
+      operationId: get_api_v1_student_exams
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/student/profile':
+    get:
+      operationId: get_api_v1_student_profile
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_student_profile
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/student-fee-structures':
+    get:
+      operationId: get_api_v1_student_fee_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_student_fee_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/student-leave':
+    get:
+      operationId: get_api_v1_student_leave
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_student_leave
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/student-leave/{id}/decision':
+    post:
+      operationId: post_api_v1_student_leave_id_decision
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/students':
+    get:
+      operationId: get_api_v1_students
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_students
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/students/{studentId}/fees':
+    get:
+      operationId: get_api_v1_students_studentId_fees
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/students/{studentId}/fees/{invoiceId}/payments':
+    post:
+      operationId: post_api_v1_students_studentId_fees_invoiceId_payments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses':
+    get:
+      operationId: get_api_v1_syllabuses
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_syllabuses
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/{id}/file':
+    get:
+      operationId: get_api_v1_syllabuses_id_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_syllabuses_id_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/{id}/teacher':
+    put:
+      operationId: put_api_v1_syllabuses_id_teacher
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/{id}/topics':
+    post:
+      operationId: post_api_v1_syllabuses_id_topics
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/annual':
+    post:
+      operationId: post_api_v1_syllabuses_annual
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/documents':
+    get:
+      operationId: get_api_v1_syllabuses_documents
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_syllabuses_documents
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/documents/{id}/file':
+    get:
+      operationId: get_api_v1_syllabuses_documents_id_file
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/excel/{id}/confirm':
+    post:
+      operationId: post_api_v1_syllabuses_excel_id_confirm
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/excel/preview':
+    post:
+      operationId: post_api_v1_syllabuses_excel_preview
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/excel/preview-term':
+    post:
+      operationId: post_api_v1_syllabuses_excel_preview_term
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/excel/template':
+    get:
+      operationId: get_api_v1_syllabuses_excel_template
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/extract-subjects':
+    post:
+      operationId: post_api_v1_syllabuses_extract_subjects
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/topics/{id}':
+    delete:
+      operationId: delete_api_v1_syllabuses_topics_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_syllabuses_topics_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/topics/{id}/complete':
+    post:
+      operationId: post_api_v1_syllabuses_topics_id_complete
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/topics/{id}/notes':
+    post:
+      operationId: post_api_v1_syllabuses_topics_id_notes
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabuses/topics/{id}/status':
+    put:
+      operationId: put_api_v1_syllabuses_topics_id_status
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/syllabus-subjects':
+    get:
+      operationId: get_api_v1_syllabus_subjects
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_syllabus_subjects
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-adjustments':
+    get:
+      operationId: get_api_v1_teacher_adjustments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_teacher_adjustments
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-adjustments/{id}/decision':
+    post:
+      operationId: post_api_v1_teacher_adjustments_id_decision
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-adjustments/available-teachers':
+    get:
+      operationId: get_api_v1_teacher_adjustments_available_teachers
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-adjustments/teachers':
+    get:
+      operationId: get_api_v1_teacher_adjustments_teachers
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-attendance':
+    get:
+      operationId: get_api_v1_teacher_attendance
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_teacher_attendance
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-attendance/{id}/decision':
+    post:
+      operationId: post_api_v1_teacher_attendance_id_decision
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-attendance/approvers':
+    get:
+      operationId: get_api_v1_teacher_attendance_approvers
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-attendance/requests':
+    get:
+      operationId: get_api_v1_teacher_attendance_requests
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-leave':
+    get:
+      operationId: get_api_v1_teacher_leave
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_teacher_leave
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-leave/{id}/decision':
+    post:
+      operationId: post_api_v1_teacher_leave_id_decision
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-leave/{id}/proof':
+    get:
+      operationId: get_api_v1_teacher_leave_id_proof
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-performance':
+    get:
+      operationId: get_api_v1_teacher_performance
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-performance/remarks/{teacher}':
+    put:
+      operationId: put_api_v1_teacher_performance_remarks_teacher
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-performance/rules':
+    get:
+      operationId: get_api_v1_teacher_performance_rules
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_teacher_performance_rules
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teachers':
+    get:
+      operationId: get_api_v1_teachers
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-salary-structures':
+    get:
+      operationId: get_api_v1_teacher_salary_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_teacher_salary_structures
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-workloads':
+    get:
+      operationId: get_api_v1_teacher_workloads
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    post:
+      operationId: post_api_v1_teacher_workloads
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-workloads/{id}':
+    delete:
+      operationId: delete_api_v1_teacher_workloads_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+    put:
+      operationId: put_api_v1_teacher_workloads_id
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/teacher-workloads/weekly':
+    post:
+      operationId: post_api_v1_teacher_workloads_weekly
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
+  '/api/v1/tenant/context':
+    get:
+      operationId: get_api_v1_tenant_context
+      responses:
+        default:
+          description: See backend behavior for response codes and schema
